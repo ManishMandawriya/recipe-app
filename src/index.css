@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.jumbotron{
+  background-color: #8e44ad;
+  /* background: var(--tenne-tawny-dark); */
+  
+  color: #fff;
+  padding: 100px;
+  text-align: center;
+}
+/* .fastfoodicon{
+
+}
+.recipe-meal-img img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+} */
+.form-control{
+  border-radius: 15px
+}
+.recipe-btn{
+  border-radius: 15px;
+  display: block;
+}
+.order{
+  position: absolute;
+  text-decoration: none;
+  margin-top: -1%;
+  font-size: large;
+
+  margin-left: 650px;
+}
+.navbar{
+  margin-top: -47%;
+  position: absolute;
+  margin-top:40px;
+  border-radius: 20px;
+  padding-right: 900px;
+
+  }
