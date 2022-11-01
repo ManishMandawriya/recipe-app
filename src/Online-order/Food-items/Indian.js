@@ -1,23 +1,37 @@
 import React from "react";
+import IndianFoodCart from "./IndianFoodCart";
+import cart from "./cart";
+import "./food.css";
+import AddToCart from "./images/AddToCart";
 
 const Indian = (props) => {
+
   return (
     <>
-    <h1 className="text-center mt-3">All Items</h1>
-    <section className="py-4 container">
-        <div className="row justify-content-center"></div>
-    </section>
-      <div className="col-11 col-md-6 col-lg-3 mx-0 mb-4"></div>
-      <div className="card p-0 ovrtflow-hidden h-100 shadow">
-        <img src={props.img} className="card-img-top img-fluid" alt="" />
-        <div className="card-body">
-          <h5 className="card-title">{props.title}</h5>
-          <p className="card-text">{props.desc}</p>
-          <button href="#" className="btn btn-success">
-            Add to Cart
-          </button>
+      <h1 className="text-center mt-3">All Items</h1>
+      <section className="py-4 container">
+        <div className="row justify-content-center">
+          {cart.productData.map((item, index) => {
+            return (
+              <>
+              <div className="img1234">
+                <IndianFoodCart
+                  img={item.img}
+                  title={item.title}
+                  desc={item.desc}
+                  pice={item.price}
+                  item={item}
+                  key={index}
+                />
+              </div>
+              <div>
+              {/* <AddToCart/> */}
+</div>
+              </>
+            );
+          })}
         </div>
-      </div>
+      </section>
     </>
   );
 };

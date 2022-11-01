@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
+import React from 'react'
+import {  NavLink } from 'react-router-dom'
 
 import './order.css'
 
@@ -8,6 +8,8 @@ const Order = () => {
     return (
         <>
     <h1 id='tit'>A Moments of Delivered on Time.</h1>
+        <img src="https://img.freepik.com/free-vector/safe-food-delivery-order-receive_23-2148549716.jpg?w=826&t=st=1667292899~exp=1667293499~hmac=e18dd791f4fe73f88761b22628172aabf654b65da611ca35fd7a85d536b117e7" style={{width:"1000px"}}/>
+        <h1>We Got Variety of Foods for You... &#128523;</h1>
 
         <div class="container">
   <div class="row">
@@ -34,7 +36,7 @@ const Order = () => {
     <div className='div3'>
     <img src="https://www.blueosa.com/wp-content/uploads/2020/07/Matar-Paneer-Peas-and-Cooked-Cottage-Cheese.jpg" className='fastfood' alt="Fast Food" />
     
-    <NavLink to="/order/indian-food" className="food2">Indian Food</NavLink>
+    <NavLink to="/order/food-delivery" className="food2">Indian Food</NavLink>
     <p className='indianp'>Taking tandoori to the next level.</p>
 </div>
     </div>

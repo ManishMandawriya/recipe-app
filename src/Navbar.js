@@ -7,9 +7,8 @@ const Navbar = () => {
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a class="navbar-brand" href="#">
-          Navbar
-        </a>
+     
+        <NavLink to="/" class="navbar-brand" style={{fontSize:"25px"}}>My Kitchen</NavLink>
         <button
           class="navbar-toggler"
           type="button"
@@ -66,9 +65,10 @@ const Navbar = () => {
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-          <button >
+          {/* <button >
           <a href="/order" className="  order">Order Online</a>
-          </button>
+          </button> */}
+          <NavLink to='/order' className='order'>Order Online</NavLink>
       
           </form>
         </div>

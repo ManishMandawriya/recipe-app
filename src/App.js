@@ -10,6 +10,8 @@ import Bill from "./Online-order/Bill";
 import Cake from "./Online-order/Food-items/Cake";
 import FastFood from "./Online-order/Food-items/FastFood";
 import Indian from "./Online-order/Food-items/Indian";
+import AddToCart from "./Online-order/Food-items/images/AddToCart";
+import FoodDelivery from "./Online-order/Food-items/FoodDelivery";
 
 const App = () => {
   const [search, setSerach] = useState("");
@@ -57,7 +59,8 @@ const App = () => {
           <Route path="/order/bill/payment" element={<Payment />}></Route>
           <Route path="/order/cake" element={<Cake/>}></Route>
           <Route path="/order/fastfood" element={<FastFood/>}></Route>
-          <Route path="/order/indian-food"  element={<Indian/>}></Route>
+          <Route path="/order/food-delivery" element={<FoodDelivery/>}></Route>
+          {/* <Route path="/order/indian-food"  element={<Indian/>}></Route> */}
 
         </Routes>
       </BrowserRouter>
