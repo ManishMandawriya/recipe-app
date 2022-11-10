@@ -1,150 +1,205 @@
-/* body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(0, 0, 34);
-    font-size: 0.8rem;
-} */
-.card{
-    max-width: 1000px;
-    margin: 2vh;
-}
-.card-top{
-    padding: 0.7rem 5rem;
-}
-.card-top a{
-    float: left;
-    margin-top: 0.7rem;
-}
-#logo{
-    font-family: 'Dancing Script';
-    font-weight: bold;
-    font-size: 1.6rem;
-}
-.card-body{
-    padding: 0 5rem 5rem 5rem;
-    background-image: url("https://i.imgur.com/4bg1e6u.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-@media(max-width:768px){
-    .card-body{
-        padding: 0 1rem 1rem 1rem;
-        background-image: url("https://i.imgur.com/4bg1e6u.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-    }  
-    .card-top{
-        padding: 0.7rem 1rem;
-    }
-}
-.row{
-    margin: 0;
-}
-.upper{
-    padding: 1rem 0;
-    justify-content: space-evenly;
-}
-#three{
-    border-radius: 1rem;
-        width: 22px;
-    height: 22px;
-    margin-right:3px;
-    border: 1px solid blue;
-    text-align: center;
-    display: inline-block;
-}
-#payment{
-    margin:0;
-    color: blue;
-}
-.icons{
-    margin-left: auto;
-}
-form span{
-    color: rgb(179, 179, 179);
-}
-form{
-    padding: 2vh 0;
-}
-input{
-    border: 1px solid rgba(0, 0, 0, 0.137);
-    padding: 1vh;
-    margin-bottom: 4vh;
-    outline: none;
-    width: 100%;
-    background-color: rgb(247, 247, 247);
-}
-input:focus::-webkit-input-placeholder
-{
-      color:transparent;
-}
-.header{
-    font-size: 1.5rem;
-}
-.left{
-    background-color: #ffffff;
-    padding: 2vh;   
-}
-.left img{
-    width: 2rem;
-}
-.left .col-4{
-    padding-left: 0;
-}
-.right .item{
-    padding: 0.3rem 0;
-}
-.right{
-    background-color: #ffffff;
-    padding: 2vh;
-}
-.col-8{
-    padding: 0 1vh;
-}
-.lower{
-    line-height: 2;
-}
-.payment{
-    background-color: rgb(23, 4, 189);
-    border-color: rgb(23, 4, 189);
-    color: white;
-    width: 100%;
-    font-size: 0.7rem;
-    margin: 4vh 0 1.5vh 0;
-    padding: 1.5vh;
-    border-radius: 0;
-}
-.btn:focus{
-    box-shadow: none;
-    outline: none;
-    box-shadow: none;
-    color: white;
-    -webkit-box-shadow: none;
-    -webkit-user-select: none;
-    transition: none; 
-}
-.btn:hover{
-    color: white;
-}
-a{
-    color: black;
-}
-a:hover{
-    color: black;
-    text-decoration: none;
-}
-input[type=checkbox]{
-    width: unset;
-    margin-bottom: unset;
-}
-#cvv{
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.575) , rgba(255, 255, 255, 0.541)), url("https://img.icons8.com/material-outlined/24/000000/help.png");
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: center;
-} 
-#cvv:hover{
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+* {
+    /* margin: 0; */
+    /* padding: 0; */
+    /* box-sizing: border-box; */
+    /* list-style: none; */
+    /* font-family: 'Montserrat', sans-serif */
+}
+
+body{
+    /* background-color:#3ecc6d; */
+}
+
+.container1 {
+    margin: 20px auto;
+    width: 800px;
+    padding: 30px
+}
+
+.card.box1 {
+    width: 350px;
+    height: 500px;
+    background-color: #3ecc6d;
+    color: #baf0c3;
+    border-radius: 0
+}
+
+.card.box2 {
+    width: 450px;
+    height: 580px;
+    background-color: #ffffff;
+    border-radius: 0
+}
+
+.text {
+    font-size: 13px
+}
+
+.box2 .btn.btn-primary.bar {
+    width: 20px;
+    background-color: transparent;
+    border: none;
+    color: #3ecc6d
+}
+
+.box2 .btn.btn-primary.bar:hover {
+    color: #baf0c3
+}
+
+.box1 .btn.btn-primary {
+    background-color: #57c97d;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd
+}
+
+.box1 .btn.btn-primary:hover {
+    background-color: #f6f8f7;
+    color: #57c97d
+}
+
+.btn.btn-success {
+    /* width: 40px; */
+    /* height: 40px; */
+    /* border-radius: 50%; */
+    /* background-color: #ddd; */
+    /* color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none
+}
+
+.nav.nav-tabs {
+    border: none;
+    border-bottom: 2px solid #ddd
+}
+
+.nav.nav-tabs .nav-item .nav-link {
+    border: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    font-size: 14px
+}
+
+.nav.nav-tabs .nav-item .nav-link:hover {
+    border-bottom: 2px solid #3ecc6d;
+    color: #05cf48
+}
+
+.nav.nav-tabs .nav-item .nav-link.active {
+    border: none;
+    border-bottom: 2px solid #3ecc6d
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    box-shadow: none;
+    height: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 15px 0px;
+    letter-spacing: 1.5px;
+    border-radius: 0
+}
+
+.inputWithIcon {
+    position: relative
+}
+
+.imgcard {
+    width: 50px;
+    height: 20px;
+    object-fit: cover
+}
+
+.inputWithIcon span {
+    position: absolute;
+    right: 0px;
+    bottom: 9px;
+    color: #57c97d;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-bottom: 1px solid #ddd
+}
+
+.btn-outline-primary {
+    color: black;
+    background-color: #ddd;
+    border: 1px solid #ddd
+}
+
+.btn-outline-primary:hover {
+    background-color: #05cf48;
+    border: 1px solid #ddd
+}
+
+.btn-check:active+.btn-outline-primary,
+.btn-check:checked+.btn-outline-primary,
+.btn-outline-primary.active,
+.btn-outline-primary.dropdown-toggle.show,
+.btn-outline-primary:active {
+    color: #baf0c3;
+    background-color: #3ecc6d;
+    box-shadow: none;
+    border: 1px solid #ddd
+}
+
+.btn-group>.btn-group:not(:last-child)>.btn,
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle),
+.btn-group>.btn-group:not(:first-child)>.btn,
+.btn-group>.btn:nth-child(n+3),
+.btn-group>:not(.btn-check)+.btn {
+    border-radius: 50px;
+    margin-right: 20px
+}
+
+form {
+    font-size: 14px
+}
+
+form .btn.btn-primary {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3ecc6d;
+    border: 1px solid #ddd
+}
+
+form .btn.btn-primary:hover {
+    background-color: #05cf48
+}
+
+@media (max-width:750px) {
+    .container {
+        padding: 10px;
+        width: 100%
+    }
+
+    .text-green {
+        font-size: 14px
+    }
+
+    .card.box1,
+    .card.box2 {
+        width: 100%
+    }
+
+    .nav.nav-tabs .nav-item .nav-link {
+        font-size: 12px
+    }
 }

@@ -1,95 +1,147 @@
 import React from 'react'
 import './payment.css'
+import Swal from 'sweetalert2'
+import { NavLink } from 'react-router-dom'
+import { useCart } from 'react-use-cart'
+import IndianFoodCart from './Food-items/IndianFoodCart'
+import cart from './Food-items/cart'
 
 const Payment = () => {
+
+    // const paid=()=>{
+    //     Swal.fire({
+    //         title: 'Are you sure?',
+    //         text: "You won't be able to revert this!",
+    //         icon: 'warning',
+    //         showCancelButton: true,
+    //         confirmButtonColor: '#3085d6',
+    //         cancelButtonColor: '#d33',
+    //         confirmButtonText: 'Yes, pay'
+    //       }).then((result) => {
+    //         if (result.isConfirmed) {
+    //           Swal.fire(
+    //             'Payment is Done',
+    //             'Money has been debited from your Account.',
+    //             'success'
+    //           )
+    //         }
+    //       })
+    // }
   return (
     <>
-        <div className="card">
-            <div className="card-top border-bottom text-center">
-                 <a href="#"> Back to shop</a>
-                <span id="logo">BBBootstrap.com</span>
-            </div>
-            <div className="card-body">
-                <div className="row upper">
-                    <span><i className="fa fa-check-circle-o"></i> Shopping bag</span>
-                    <span><i className="fa fa-check-circle-o"></i> Order details</span>
-                    <span id="payment"><span id="three">3</span>Payment</span>
+
+              
+        <div class="container bg-light d-md-flex align-items-center container1"> 
+
+        <div class="card box1 shadow-sm p-md-5 p-md-5 p-4"> 
+
+        <div class="fw-bolder mb-4"><span class="fas fa-dollar-sign"></span>
+        <span class="ps-1">599,00</span></div> 
+
+        <div class="d-flex flex-column"> 
+
+        <div class="d-flex align-items-center justify-content-between text">
+
+         <span class="">Commission</span> <span class="fas fa-dollar-sign">
+
+         <span class="ps-1">1.99</span></span> </div> 
+
+         <div class="d-flex align-items-center justify-content-between text mb-4"> <span>Total</span>
+          <span class="fas fa-dollar-sign">
+
+          <span class="ps-1">600.99</span></span>
+
+           </div>
+            <div class="border-bottom mb-4"></div>
+
+          <div class="d-flex flex-column mb-4"> <span class="far fa-file-alt text">
+
+          <span class="ps-2">Invoice ID:</span>
+          </span> <span class="ps-3">SN8478042099</span> 
+          </div>
+           <div class="d-flex flex-column mb-5">
+            <span class="far fa-calendar-alt text">
+            <span class="ps-2">Next payment:</span>
+            </span>
+             <span class="ps-3">22 july,2018</span>
+              </div> 
+           <div class="d-flex align-items-center justify-content-between text mt-5">
+            <div class="d-flex flex-column text"> <span>Customer Support:</span>
+             <span>online chat 24/7</span> 
+             </div>
+            <div class="btn btn-primary rounded-circle btn ">
+            <span class="fas fa-comment-alt">
+
+            </span>
+            </div> 
+            </div> 
+            </div> 
+            </div> 
+            <div class="card box2 shadow-sm">
+             <div class="d-flex align-items-center justify-content-between p-md-5 p-4">
+              <span class="h5 fw-bold m-0">Payment methods</span>
+               <div class="btn btn-primary bar">
+               <span class="fas fa-bars"></span>
+               </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-7">
-                        <div className="left border">
-                            <div className="row">
-                                <span className="header">Payment</span>
-                                <div className="icons">
-                                    <img src="https://img.icons8.com/color/48/000000/visa.png"/>
-                                    <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png"/>
-                                    <img src="https://img.icons8.com/color/48/000000/maestro.png"/>
-                                </div>
-                            </div>
-                            <form>
-                                <span>Cardholder's name:</span>
-                                <input placeholder="Linda Williams"/>
-                                <span>Card Number:</span>
-                                <input placeholder="0125 6780 4567 9909"/>
-                                <div className="row">
-                                    <div className="col-4"><span>Expiry date:</span>
-                                        <input placeholder="YY/MM"/>
-                                    </div>
-                                    <div className="col-4"><span>CVV:</span>
-                                        <input id="cvv"/>
-                                    </div>
-                                </div>
-                                <input type="checkbox" id="save_card" className="align-left"/>
-                                <label for="save_card">Save card details to wallet</label>  
-                            </form>
-                        </div>                        
-                    </div>
-                    <div className="col-md-5">
-                        <div className="right border">
-                            <div className="header">Order Summary</div>
-                            <p>2 items</p>
-                            <div className="row item">
-                                <div className="col-4 align-self-center"><img className="img-fluid" src="https://i.imgur.com/79M6pU0.png"/></div>
-                                <div className="col-8">
-                                    <div className="row"><b>$ 26.99</b></div>
-                                    <div className="row text-muted">Be Legandary Lipstick-Nude rose</div>
-                                    <div className="row">Qty:1</div>
-                                </div>
-                            </div>
-                            <div className="row item">
-                                <div className="col-4 align-self-center"><img className="img-fluid" src="https://i.imgur.com/Ew8NzKr.jpg"/></div>
-                                <div className="col-8">
-                                    <div className="row"><b>$ 19.99</b></div>
-                                    <div className="row text-muted">Be Legandary Lipstick-Sheer Navy Cream</div>
-                                    <div className="row">Qty:1</div>
-                                </div>
-                            </div>
-                            <hr/>
-                            <div className="row lower">
-                                <div className="col text-left">Subtotal</div>
-                                <div className="col text-right">$ 46.98</div>
-                            </div>
-                            <div className="row lower">
-                                <div className="col text-left">Delivery</div>
-                                <div className="col text-right">Free</div>
-                            </div>
-                            <div className="row lower">
-                                <div className="col text-left"><b>Total to pay</b></div>
-                                <div className="col text-right"><b>$ 46.98</b></div>
-                            </div>
-                            <div className="row lower">
-                                <div className="col text-left"><a href="#"><u>Add promo code</u></a></div>
-                            </div>
-                            <button className="btn payment">Place order</button>
-                            <p className="text-muted text-center">Complimentary Shipping & Returns</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <ul class="nav nav-tabs mb-3 px-md-4 px-2"> 
+                <li class="nav-item"> <a class="nav-link px-2 active" aria-current="page" href="#">Credit Card</a> </li> 
+                <li class="nav-item"> <a class="nav-link px-2" href="#">Mobile Payment</a> </li>
+                 <li class="nav-item ms-auto"> <a class="nav-link px-2" href="#">+ More</a> 
+                 </li>
+                  </ul>
+                   <div class="px-md-5 px-4 mb-4 d-flex align-items-center"> 
+                   <div class="btn btn-success me-4"><span class="fas fa-plus"></span>
+                   </div> 
+                   <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked/> 
+                    <label class="btn btn-outline-primary" for="btnradio1"><span class="pe-1">+</span>5949</label>
+                     <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"/> 
+                     <label class="btn btn-outline-primary" for="btnradio2"><span class="lpe-1">+</span>3894</label> 
+                     </div> 
+                     </div> 
+                     <form action=""> <div class="row"> <div class="col-12"> <div class="d-flex flex-column px-md-5 px-4 mb-4"> <span>Credit Card</span> <div class="inputWithIcon"> 
+                     <input class="form-control" type="text" placeholder="1234 5678 9012 3456"/> 
+                     <span class=""> 
+                     <img src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-logok-15.png" alt="" className='imgcard'/>
+                     </span>
+                      </div> 
+                      </div>
+                       </div> 
+                       <div class="col-md-6"> <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4"> <span>Expiration<span class="ps-1">Date</span>
+                       </span> 
+                       <div class="inputWithIcon"> 
+                       <input type="text" class="form-control" placeholder='5/29' />
+                        <span class="fas fa-calendar-alt"></span>
+                         </div> 
+                         </div>
+                          </div>
+                           <div class="col-md-6"> <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4"> <span>Code CVV</span>
+                            <div class="inputWithIcon"> <input type="password" class="form-control" placeholder='***'/> <span class="fas fa-lock"></span> </div> </div> </div> <div class="col-12"> <div class="d-flex flex-column px-md-5 px-4 mb-4"> <span>Name</span> <div class="inputWithIcon"> 
             
-         <div>
-        </div>
-        </div>
+            <input class="form-control text-uppercase" type="text" placeholder='Manish' /> 
+            <span class="far fa-user">
+
+            </span> 
+            </div> 
+            </div>
+             </div>
+              <div class="col-12 px-md-5 px-4 mt-3">
+
+               <div >
+                {/* <button class="btn btn-primary w-100" onClick={paid()}>Pay $599.00 </button> */}
+                <button class="btn btn-primary w-100" >Pay $599.00 </button>
+
+                
+
+                <NavLink to='/' className="btn btn-primary w-100">Go Back to Home Page</NavLink>
+                </div>
+                </div>
+                 </div>
+                  </form>
+                   </div>
+                    </div>
+
     </>
     )
 }

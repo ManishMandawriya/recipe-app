@@ -2,7 +2,6 @@ import React from "react";
 import IndianFoodCart from "./IndianFoodCart";
 import cart from "./cart";
 import "./food.css";
-import AddToCart from "./images/AddToCart";
 
 const Indian = (props) => {
 
